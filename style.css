@@ -8,6 +8,7 @@ label {
 body {
     background-color: #202124;
     text-align: center;
+    align-items: center;
 }
 input {
     border-radius: 15px;
