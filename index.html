@@ -55,7 +55,9 @@
             let simpSqrtInput = document.getElementById('simpSqrtIn');
             let simpSqrtOutput = document.getElementById('simpSqrtOut');
 
-            simpSqrtOutput.value = simpSqrtInput.value;
-        </script>
+            simpSqrtInput.oninput = function(){
+                simpSqrtOutput.value = simpSqrtInput.value;
+            }
+            </script>
     </body>
 </html>
