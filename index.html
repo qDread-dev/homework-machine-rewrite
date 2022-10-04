@@ -8,7 +8,6 @@
     <body>
         <!--Functions that will be used later-->
         <script>
-            let k = 1;
             function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
                 for (let i = 1; i * i <= simpSqrtInput.value; i++)
                 {
@@ -85,6 +84,7 @@
             let simpSqrtIn = document.getElementById('simpSqrtIn');
             let simpSqrtOut = document.getElementById('simpSqrtOut');
             simpSqrtIn.oninput = function(){
+                let k = 1;
                 simplifySqrt(simpSqrtIn, simpSqrtOut, k)
             }
         </script>
