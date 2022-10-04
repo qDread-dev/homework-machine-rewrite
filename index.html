@@ -51,6 +51,9 @@
             let basicOutput = document.getElementById('equationOut');
             basicInput.oninput = function(){
                 basicOutput.value = eval(basicInput.value);
+                if(basicInput.value == ""){
+                    basicOutput.value = "";
+                }
             }
         </script>
         <h2>Exact Square Root</h2>
