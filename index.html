@@ -30,8 +30,8 @@
             <input type="text" id="exactSqrtOut"><br>
         </form>
         <script>
-            var sqrtInput = document.getElementById('exactSqrtIn');
-            var sqrtOutput = document.getElementById('exactSqrtOut');
+            let sqrtInput = document.getElementById('exactSqrtIn');
+            let sqrtOutput = document.getElementById('exactSqrtOut');
             input.oninput = function(){
                 output.value = Math.sqrt(input.value)
                 if(input.value == ""){
@@ -47,8 +47,8 @@
             <input type="text" for="simSqrtOut"><br>
         </form>
         <script>
-            var simpInput = document.getElementById('simpSqrtIn');
-            var simpOutput = document.getElementById('simpSqrtOut');
+            let simpInput = document.getElementById('simpSqrtIn');
+            let simpOutput = document.getElementById('simpSqrtOut');
             var k = 1;
             function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
                 for (let i = 1; i * i <= simpSqrtInput.value; i++){
