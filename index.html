@@ -16,10 +16,10 @@
             <input type="text" id="equationOut"><br>
         </form>
         <script>
-            let input = document.getElementById('equationIn');
-            let output = document.getElementById('equationOut');
-            input.oninput = function(){
-                output.value = eval(input.value);
+            let basicInput = document.getElementById('equationIn');
+            let basicOutput = document.getElementById('equationOut');
+            basicInput.oninput = function(){
+                basicOutput.value = eval(basicInput.value);
             }
         </script>
         <h2>Exact Square Root</h2>
@@ -33,10 +33,10 @@
         <script>
             let sqrtInput = document.getElementById('exactSqrtIn');
             let sqrtOutput = document.getElementById('exactSqrtOut');
-            input.oninput = function(){
-                output.value = Math.sqrt(input.value)
-                if(input.value == ""){
-                    output.value = "";
+            sqrtInput.oninput = function(){
+                sqrtOutput.value = Math.sqrt(sqrtInput.value)
+                if(sqrtInput.value == ""){
+                    sqrtOutput.value = "";
                 }
             }
         </script>
@@ -47,5 +47,8 @@
             <label for="simpSqrtOut">Output:</label><br>
             <input type="text" for="simSqrtOut"><br>
         </form>
+        <script>
+            let simpSqrtIn = document.getElementById();
+        </script>
     </body>
 </html>
