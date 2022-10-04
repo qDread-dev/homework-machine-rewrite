@@ -85,7 +85,8 @@
             
             let simpSqrtInput = document.getElementById('simpSqrtIn');
             let simpSqrtOutput = document.getElementById('simpSqrtOut');
-
+            simpSqrtInput.oninput = function(){
+                
             for (let i = 1; i * i <= simpSqrtInput.value; i++)
                 {
                     if (simpSqrtInput.value % (i * i) == 0)
@@ -112,6 +113,7 @@
                         simpSqrtOutput.value = k + "\u{221A}" + (simpSqrtInput.value / (k * k));
                     }
                 }
+            }
         </script>
     </body>
 </html>
