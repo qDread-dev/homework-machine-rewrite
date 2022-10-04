@@ -20,6 +20,7 @@ input {
     color: #FFFFFF;
     padding: 5px 10px 5px 10px;
     background-color: #303134;
+    text-align:center;
 }
 h1, h2, h3{
   color: #FFF;
