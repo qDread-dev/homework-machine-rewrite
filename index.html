@@ -14,5 +14,12 @@
             <label for="equationOut">Output</label><br>
             <input type="text" id="equationOut"><br>
         </form>
+        <script>
+            let input = document.getElementById('equationIn');
+            let output = documetn.getElementById('equationOut');
+            input.oninput = function(){
+                output.value = eval(input.value);
+            }
+        </script>
     </body>
 </html>
