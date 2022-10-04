@@ -16,12 +16,25 @@
             <input type="text" id="equationOut"><br>
         </form>
         <script>
-            let input = document.getElementById('equationIn');
-            let output = documetn.getElementById('equationOut');
+            var input = document.getElementById('equationIn');
+            var output = document.getElementById('equationOut');
             input.oninput = function(){
                 output.value = eval(input.value);
             }
         </script>
-
+        <h2>Exact Square Root</h2>
+        <form>
+            <label for="exactSqrtIn">Enter the number here</label><br>
+            <input type="text" id="exactSqrtIn"><br>
+            <label for="exactSqrtOut">Square Root</label><br>
+            <input type="text" id="exactSqrtOut"><br>
+        </form>
+        <script>
+            var input = document.getElementById('exactSqrtIn');
+            var output = document.getElementById('exactSqrtOut');
+            input.oninput = function(){
+                output.value = Math.sqrt(input.value)
+            }
+        </script>
     </body>
 </html>
