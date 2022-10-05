@@ -93,8 +93,30 @@
             <h2>Pythagorean Theorem</h2>
             <h3>Find C</h3>
             <form>
-                <!--TODO-->
+                <label for="pythFcA">Enter a here</label><br>
+                <input type="text" id="pythFcA"><br>
+                <label for="pythFcB">Enter b here</label><br>
+                <input type="text" id="pythFcB"><br>
+                <label for="pythFcC">C is</label><br>
+                <input type="text" id="pythFcC"><br>
             </form>
+            <script>
+                let pythFcA = document.getElementById('pythFcA');
+                let pythFcB = document.getElementById('pythFcB');
+                let pythFcC = document.getElementById('pythFcC');
+
+                pythFcA.oninput = function(){
+                    pythFcB.oninput = function(){
+                        pythFcC.value = (pythFcA**2 + pythFcB**2)
+                        pythFcC.value = simplifySqrt(pythFcC, pythFcC, k)
+                    }
+                }
+                pythFcB.oninput = function(){
+                    pythFCA.oninput = function(){
+
+                    }
+                }
+            </script>
             <h3>Find A</h3>
             <form>
                 <!--TODO-->
