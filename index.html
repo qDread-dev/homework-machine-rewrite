@@ -122,11 +122,32 @@
             </script>
             <h3>Find A</h3>
             <form>
-                <!--TODO-->
+                <label for="pythFaB">Enter b here</label><br>
+                <input type="text" id="pythFaB"><br>
+                <label for="pythFaC">Enter c here</label><br>
+                <input type="text" id="pythFaC"><br>
+                <label for="pythFaA">A is</label><br>
+                <input type="text" id="pythFaA"><br>
             </form>
-            <h3>Pythagorean Theorem Check</h3>
-            <form>
-                <!--TODO-->
-            </form>
+            <script>
+                let pythFaA = document.getElementById('pythFaA')
+                let pythFaB = document.getElementById('pythFaB')
+                let pythFaC = document.getElementById('pythFaC')
+
+                pythFaB.oninput = function(){
+                    pythFaC.oninput=function(){
+                        k = 1;
+                        pythFaA.value = pythFaB.value**2+pythFac.value**2;
+                        simplifySqrt(pythFaA, pythFaA, k)
+                    }
+                }
+                pythFaC.oninput=function(){
+                    pythFaB.oninput=function(){
+                        k=1;
+                        pythFaA.value = pythFaB.value**2+pythFac.value**2;
+                        simplifySqrt(pythFaA, pythFaA, k)
+                    }
+                }
+            </script>
     </body>
 </html>
