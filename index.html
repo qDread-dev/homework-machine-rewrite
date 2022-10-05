@@ -6,6 +6,37 @@
         <title>Dashboard</title>
     </head>
     <body>
+        <!--Functions here-->
+        <script>
+        function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
+            for (let i = 1; i * i <= simpSqrtInput.value; i++)
+            {
+                if (simpSqrtInput.value % (i * i) == 0)
+                {
+                    k = i;
+                }
+            }
+            if (simpSqrtInput / (k * k) === null)
+            {
+                simpSqrtOutput.value = k;
+            }
+            if (simpSqrtInput.value / (k * k) == 1)
+            {
+                simpSqrtOutput.value = k;
+            }
+            else if (simpSqrtInput.value / (k * k) > 1)
+            {
+                if (k == "1")
+                {
+                    simpSqrtOutput.value = "\u{221A}" + (simpSqrtInput.value / (k * k));
+                }
+                else
+                {
+                    simpSqrtOutput.value = k + "\u{221A}" + (simpSqrtInput.value / (k * k));
+                }
+            }
+        };
+        </script>
         
         <h1>Homework Machine</h1>
         <h2>Basic Calculator</h2>
@@ -54,9 +85,9 @@
             
             let simpSqrtInput = document.getElementById('simpSqrtIn');
             let simpSqrtOutput = document.getElementById('simpSqrtOut');
-
+            let k = 1;
             simpSqrtInput.oninput = function(){
-                simpSqrtOutput.value = simpSqrtInput.value;
+                simplifySqrt(simpSqrtInput, simpSqrtOutput, k)
             }
             </script>
     </body>
