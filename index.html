@@ -107,7 +107,8 @@
 
                 pythFcA.oninput = function(){
                     pythFcB.oninput = function(){
-                        pythFcC.value = (pythFcA**2 + pythFcB**2)
+                        pythFcC.value = (pythFcA*pythFcA + pythFcB*pythFcB)
+                        k = 1;
                         pythFcC.value = simplifySqrt(pythFcC, pythFcC, k)
                     }
                 }
