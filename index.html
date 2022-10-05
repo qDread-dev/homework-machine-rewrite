@@ -137,14 +137,14 @@
                 pythFaB.oninput = function(){
                     pythFaC.oninput=function(){
                         k = 1;
-                        pythFaA.value = pythFaB.value*pythFaB.value  +pythFaC.value*pythFaC.value;
+                        pythFaA.value = pythFaB.value*pythFaB.value - pythFaC.value*pythFaC.value;
                         simplifySqrt(pythFaA, pythFaA, k)
                     }
                 }
                 pythFaC.oninput=function(){
                     pythFaB.oninput=function(){
                         k=1;
-                        pythFaA.value = pythFaB.value*pythFaB.value+pythFaC.value*pythFaC.value;
+                        pythFaA.value = pythFaB.value*pythFaB.value - pythFaC.value*pythFaC.value;
                         simplifySqrt(pythFaA, pythFaA, k)
                     }
                 }
