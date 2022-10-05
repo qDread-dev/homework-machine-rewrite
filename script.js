@@ -1,9 +1,10 @@
 function checkPageFocus(){
     if(document.hasFocus()){
-        document.tile = "THM lmao";
+        document.title = "THM";
         }
     else{
         document.title ="Dashboard";
+
     }
 }
 setInterval(checkPageFocus, 300);
