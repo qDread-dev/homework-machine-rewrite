@@ -1,5 +1,9 @@
 function checkPageFocus(){
-    if(document.hasFocus()==false){
-        document.title = "Dashboard"
+    if(document.hasFocus()){
+
+        }
+    else{
+        document.title ="Dashboard";
     }
 }
+setInterval(checkPageFocus, 300);
