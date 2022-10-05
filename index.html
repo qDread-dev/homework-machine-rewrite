@@ -2,11 +2,11 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src='script.js'></script>
         <link rel='stylesheet' href='style.css'>
         <title>Dashboard</title>
     </head>
     <body>
+        
         <h1>Homework Machine</h1>
         <h2>Basic Calculator</h2>
         <form>
@@ -16,13 +16,17 @@
             <input type="text" id="equationOut"><br>
         </form>
         <script>
-            var input = document.getElementById('equationIn');
-            var output = document.getElementById('equationOut');
-            input.oninput = function(){
-                output.value = eval(input.value);
+            let basicInput = document.getElementById('equationIn');
+            let basicOutput = document.getElementById('equationOut');
+            basicInput.oninput = function(){
+                basicOutput.value = eval(basicInput.value);
+                if(basicInput.value == ""){
+                    basicOutput.value = "";
+                }
             }
         </script>
         <h2>Exact Square Root</h2>
+        <!-- this is me when I do math -->
         <form>
             <label for="exactSqrtIn">Enter the number here</label><br>
             <input type="text" id="exactSqrtIn"><br>
@@ -30,54 +34,30 @@
             <input type="text" id="exactSqrtOut"><br>
         </form>
         <script>
-            var input = document.getElementById('exactSqrtIn');
-            var output = document.getElementById('exactSqrtOut');
-            input.oninput = function(){
-                output.value = Math.sqrt(input.value)
-                if(input.value == ""){
-                    output.value = "";
+            let sqrtInput = document.getElementById('exactSqrtIn');
+            let sqrtOutput = document.getElementById('exactSqrtOut');
+            sqrtInput.oninput = function(){
+                sqrtOutput.value = Math.sqrt(sqrtInput.value)
+                if(sqrtInput.value == ""){
+                    sqrtOutput.value = "";
                 }
             }
         </script>
         <h2>Simplify Square Roots</h2>
         <form>
             <label for="simpSqrtIn">Enter the number here</label><br>
-            <input type="text" for="simSqrtIn"><br>
+            <input type="text" for="simpSqrtIn"><br>
             <label for="simpSqrtOut">Output:</label><br>
-            <input type="text" for="simSqrtOut"><br>
+            <input type="text" for="simpSqrtOut"><br>
         </form>
         <script>
-            var input = document.getElementById('simpSqrtIn');
-            var output = document.getElementById('simpSqrtOut');
-            var k = 1;
-            function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
-                for (let i = 1; i * i <= simpSqrtInput.value; i++){
-                    if (simpSqrtInput.value % (i * i) == 0)
-                    {
-                        k = i;
-                    }
-                }
-                if (simpSqrtInput / (k * k) === null)
-                {
-                    simpSqrtOutput.value = k;
-                }
-                if (simpSqrtInput.value / (k * k) == 1)
-                {
-                    simpSqrtOutput.value = k;
-                }
-                else if (simpSqrtInput.value / (k * k) > 1)
-                {
-                    if (k == "1")
-                    {
-                        simpSqrtOutput.value = "\u{221A}" + (simpSqrtInput.value / (k * k));
-                    }
-                    else
-                    {
-                        simpSqrtOutput.value = k + "\u{221A}" + (simpSqrtInput.value / (k * k));
-                    }
-                }
-            };
-            simplifySqrt(input, output, k);
-        </script>
+            
+            let simpSqrtInput = document.getElementById('simpSqrtIn');
+            let simpSqrtOutput = document.getElementById('simpSqrtOut');
+
+            simpSqrtInput.oninput = function(){
+                simpSqrtOutput.value = simpSqrtInput.value;
+            }
+            </script>
     </body>
 </html>
