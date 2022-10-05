@@ -1,6 +1,6 @@
 function checkPageFocus(){
     if(document.hasFocus()){
-
+        document.tile = "THM lmao";
         }
     else{
         document.title ="Dashboard";
