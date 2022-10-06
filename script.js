@@ -7,4 +7,4 @@ function checkPageFocus(){
 
     }
 }
-setInterval(checkPageFocus, 300);
+setInterval(checkPageFocus, 200);
