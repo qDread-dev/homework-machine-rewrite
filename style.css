@@ -25,3 +25,14 @@ input {
 h1, h2, h3{
   color: 	#e4e5f1;
 }
+#donate{
+    font-weight: bold;
+    color:	#e4e5f1;
+    background-color: #25273c;
+    padding:5px 10px 5px 10px;
+    border-radius: 15px;
+    border:2px solid #777a92;
+}
+#donate:hover{
+    background-color:	#777a92;
+}
