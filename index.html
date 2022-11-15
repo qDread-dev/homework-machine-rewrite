@@ -142,6 +142,31 @@
                         simplifySqrt(pythFaA, pythFaA, k)
                 }
             </script>
+
+<form>
+                <h2>Aritmatic Squence !! CURRENTLY NON FUNCTIONAL !!</h2>
+                <label for="nth">What number do you want to find?</label><br>
+                <input type="text" id="nth"><br>
+                <label for="aSubOne">What is a <sub>1</sub></label><br>
+                <input type="text" id="aSubOne"><br>
+                <label for="commonDif">What is the common difference?</label><br>
+                <input type="text" id="commonDif"><br>
+                <label for="arithSolution">Solution</label><br>
+                <input type="text" id="arithSolution"><br>
+            </form>
+            <script>
+                var term = document.getElementById('nth')
+                var aSubOne = document.getElementById('aSubOne')
+                var commonDif = document.getElementById('commonDif')
+                var arithSolution = document.getElementById('arithSolution')
+                var temp;
+                commonDif.oninput = function(){
+                    temp = term.value - 1;
+                    temp = temp * commonDif.value;
+                    temp = aSubOne.value + temp;
+                    arithSolution.value = temp;
+                }
+            </script>
             <footer>
                 <button id="donate" onclick="openDono()">Donate</button>
                 <script>
