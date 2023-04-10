@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="/js/functions.js"></script>
+    </head>
+    <body>
+        <h2>Simplify Square Roots</h2>
+        <form>
+            <label for="simpSqrtIn">Enter the number here</label><br>
+            <input type="text" id="simpSqrtIn"><br>
+            <label for="simpSqrtOut">Output:</label><br>
+            <input type="text" id="simpSqrtOut"><br>
+        </form>
+        <script>
+            let simpSqrtInput = document.getElementById('simpSqrtIn');
+            let simpSqrtOutput = document.getElementById('simpSqrtOut');
+            let k = 1;
+            simpSqrtInput.oninput = function(){
+                simplifySqrt(simpSqrtInput, simpSqrtOutput, k)
+            }
+            </script>
+    </body>
+</html>

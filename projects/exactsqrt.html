@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Exact Square Root</h2>
+        <!-- this is me when I do math -->
+        <form>
+            <label for="exactSqrtIn">Enter the number here</label><br>
+            <input type="text" id="exactSqrtIn"><br>
+            <label for="exactSqrtOut">Square Root</label><br>
+            <input type="text" id="exactSqrtOut"><br>
+        </form>
+        <script>
+            let sqrtInput = document.getElementById('exactSqrtIn');
+            let sqrtOutput = document.getElementById('exactSqrtOut');
+            sqrtInput.oninput = function(){
+                sqrtOutput.value = Math.sqrt(sqrtInput.value)
+                if(sqrtInput.value == ""){
+                    sqrtOutput.value = "";
+                }
+            }
+        </script>
+    </body>
+</html>
