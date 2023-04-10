@@ -1,170 +1,52 @@
-<!DOCTYPE html JavaScript>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <script src="script.js"></script>
+        <meta charset="UTF-8">
+        <title>Home Page | THM</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='stylesheet' href='style.css'>
+        <link rel='stylesheet' href='css/mainpage.css'>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
     <body>
-        <!--Functions here-->
-        <script>
-        function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
-            for (let i = 1; i * i <= simpSqrtInput.value; i++)
-            {
-                if (simpSqrtInput.value % (i * i) == 0)
-                {
-                    k = i;
-                }
-            }
-            if (simpSqrtInput / (k * k) === null)
-            {
-                simpSqrtOutput.value = k;
-            }
-            if (simpSqrtInput.value / (k * k) == 1)
-            {
-                simpSqrtOutput.value = k;
-            }
-            else if (simpSqrtInput.value / (k * k) > 1)
-            {
-                if (k == "1")
-                {
-                    simpSqrtOutput.value = "\u{221A}" + (simpSqrtInput.value / (k * k));
-                }
-                else
-                {
-                    simpSqrtOutput.value = k + "\u{221A}" + (simpSqrtInput.value / (k * k));
-                }
-            }
-        };
-        </script>
-        
-        <h1>The Homework Machine</h1>
-        <h2>Basic Calculator</h2>
-        <form>
-            <label for="equationIn">Enter the equation here</label><br>
-            <input type="text" id="equationIn"><br>
-            <label for="equationOut">Output</label><br>
-            <input type="text" id="equationOut"><br>
-        </form>
-        <script>
-            let basicInput = document.getElementById('equationIn');
-            let basicOutput = document.getElementById('equationOut');
-            basicInput.oninput = function(){
-                basicOutput.value = eval(basicInput.value);
-                if(basicInput.value == ""){
-                    basicOutput.value = "";
-                }
-            }
-        </script>
-        <h2>Exact Square Root</h2>
-        <!-- this is me when I do math -->
-        <form>
-            <label for="exactSqrtIn">Enter the number here</label><br>
-            <input type="text" id="exactSqrtIn"><br>
-            <label for="exactSqrtOut">Square Root</label><br>
-            <input type="text" id="exactSqrtOut"><br>
-        </form>
-        <script>
-            let sqrtInput = document.getElementById('exactSqrtIn');
-            let sqrtOutput = document.getElementById('exactSqrtOut');
-            sqrtInput.oninput = function(){
-                sqrtOutput.value = Math.sqrt(sqrtInput.value)
-                if(sqrtInput.value == ""){
-                    sqrtOutput.value = "";
-                }
-            }
-        </script>
-        <h2>Simplify Square Roots</h2>
-        <form>
-            <label for="simpSqrtIn">Enter the number here</label><br>
-            <input type="text" id="simpSqrtIn"><br>
-            <label for="simpSqrtOut">Output:</label><br>
-            <input type="text" id="simpSqrtOut"><br>
-        </form>
-        <script>
+        <a class="tile" href="./projects/basiccalc.html">
+            <h4>Basic Calculator</h4>
+        </a>
+        <a class="tile" href="./projects/exactsqrt.html">
+            <h4>Exact Square Root</h4>
             
-            let simpSqrtInput = document.getElementById('simpSqrtIn');
-            let simpSqrtOutput = document.getElementById('simpSqrtOut');
-            let k = 1;
-            simpSqrtInput.oninput = function(){
-                simplifySqrt(simpSqrtInput, simpSqrtOutput, k)
+        </a>
+        <a class="tile" href="./projects/simpsqrt.html">
+            <h4>Simplified Square Root</h4>
+            
+        </a>
+        <a class="tile" href="./projects/pythag.html">
+            <h4>Pythagorean Theorem</h4>
+            
+        </a>
+        <a class="tile" href="./projects/arith.html">
+            <h4>Arithmetic Sequence</h4>
+            
+        </a>
+        <style>
+            .tile{
+                display: inline-block;
+                word-wrap: break-word;
+                position: relative;
+                width: 200px;
+                height: 200px;
+                background-color: #620d6d;
+                margin: 10px;
+                text-align: center;
+                line-height: 20px;
+                font-size: 20px;
+                color: #fff;
+                text-decoration: none;
             }
-            </script>
-            <h2>Pythagorean Theorem</h2>
-            <h3>Find C</h3>
-            <form>
-                <label for="pythFcA">Enter a here</label><br>
-                <input type="text" id="pythFcA"><br>
-                <label for="pythFcB">Enter b here</label><br>
-                <input type="text" id="pythFcB"><br>
-                <label for="pythFcC">C is</label><br>
-                <input type="text" id="pythFcC"><br>
-            </form>
-            <script>
-                let pythFcA = document.getElementById('pythFcA');
-                let pythFcB = document.getElementById('pythFcB');
-                let pythFcC = document.getElementById('pythFcC');
-
-                pythFcA.oninput = function(){
-                        pythFcC.value = pythFcA.value*pythFcA.value + pythFcB.value*pythFcB.value;
-                        k = 1;
-                        simplifySqrt(pythFcC, pythFcC, k)
-                }
-                pythFcB.oninput = function(){
-                    pythFcC.value = pythFcA.value*pythFcA.value + pythFcB.value*pythFcB.value;
-                        k=1;
-                        simplifySqrt(pythFcC, pythFcC, k)
-                }
-            </script>
-            <h3>Find A</h3>
-            <form>
-                <label for="pythFaB">Enter b here</label><br>
-                <input type="text" id="pythFaB"><br>
-                <label for="pythFaC">Enter c here</label><br>
-                <input type="text" id="pythFaC"><br>
-                <label for="pythFaA">A is</label><br>
-                <input type="text" id="pythFaA"><br>
-            </form>
-            <script>
-                let pythFaA = document.getElementById('pythFaA')
-                let pythFaB = document.getElementById('pythFaB')
-                let pythFaC = document.getElementById('pythFaC')
-
-                pythFaB.oninput = function(){
-                        k = 1;
-                        pythFaA.value = pythFaB.value*pythFaB.value - pythFaC.value*pythFaC.value;
-                        simplifySqrt(pythFaA, pythFaA, k)
-                }
-                pythFaC.oninput=function(){
-                    k=1;
-                        pythFaA.value = pythFaC.value*pythFaC.value - pythFaB.value*pythFaB.value;
-                        simplifySqrt(pythFaA, pythFaA, k)
-                }
-            </script>
-            <form>
-                <h2>Aritmatic Squence !! CURRENTLY NON FUNCTIONAL !!</h2>
-                <label for="nth">What number do you want to find?</label><br>
-                <input type="text" id="nth"><br>
-                <label for="aSubOne">What is a <sub>1</sub></label><br>
-                <input type="text" id="aSubOne"><br>
-                <label for="commonDif">What is the common difference?</label><br>
-                <input type="text" id="commonDif"><br>
-                <label for="arithSolution">Solution</label><br>
-                <input type="text" id="arithSolution"><br>
-            </form>
-            <script>
-                var term = document.getElementById('nth')
-                var aSubOne = document.getElementById('aSubOne')
-                var commonDif = document.getElementById('commonDif')
-                var arithSolution = document.getElementById('arithSolution')
-                var temp;
-                commonDif.oninput = function(){
-                    temp = term.value - 1;
-                    temp = temp * commonDif.value;
-                    temp = aSubOne.value + temp;
-                    arithSolution.value = temp;
-                }
-            </script>
+            .tile h4{
+                position: absolute;
+                bottom: 10px;
+                width: 100%;
+            }
+        </style>
     </body>
 </html>
