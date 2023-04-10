@@ -26,5 +26,3 @@ function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
         }
     }
 };
-
-export { simplifySqrt};

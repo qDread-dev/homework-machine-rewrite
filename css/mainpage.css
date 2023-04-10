@@ -1,0 +1,46 @@
+.tile{
+    display: inline-block;
+    word-wrap: break-word;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #620d6d;
+    margin: 10px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+.tile h4{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+label {
+    font-weight: bold;
+    font-size: 16px;
+    color: 	#e4e5f1;
+    padding-left: 10px;
+    line-height: 1.5;
+}
+body {
+    background-color: #161722;
+    text-align: center;
+    align-items: center;
+}
+input {
+    border-radius: 15px;
+    border: 2px solid 	#cacde8;
+    font-size: 18px;
+    line-height: 1.5;
+    outline: none;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 5px 10px 5px 10px;
+    background-color: #303134;
+    text-align:center;
+}
+h1, h2, h3{
+  color: 	#e4e5f1;
+}
