@@ -1,4 +1,6 @@
+
 .tile{
+    border-radius: 15px;
     display: inline-block;
     word-wrap: break-word;
     position: relative;
@@ -7,7 +9,6 @@
     background-color: #620d6d;
     margin: 10px;
     text-align: center;
-    line-height: 20px;
     font-size: 20px;
     color: #fff;
     text-decoration: none;
