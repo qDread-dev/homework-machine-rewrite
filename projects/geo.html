@@ -12,7 +12,7 @@
             <label for="aSubOne">What is a <sub>1</sub></label><br>
             <input type="text" id="aSubOne"><br>
             <label for="commonRat">What is the common ratio?</label><br>
-            <input type="text" id="commonDif"><br>
+            <input type="text" id="commonRat"><br>
         </form>
         <br><br><br>
         <div>
@@ -24,7 +24,7 @@
             var commonRat = document.getElementById('commonRat')
             var arithSolution = document.getElementById('ans')
             var temp;
-            commonDif.oninput = function(){
+            commonRat.oninput = function(){
                 temp = term.value - 1;
                 temp = commonRat.value ** tmp;
                 temp = parseInt(aSubOne.value) * parseInt(temp);
