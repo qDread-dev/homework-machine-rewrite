@@ -9,14 +9,14 @@
         <form>
             <label for="exactSqrtIn">Enter the number here</label><br>
             <input type="text" id="exactSqrtIn"><br>
-            <label for="exactSqrtOut">Square Root</label><br>
-            <input type="text" id="exactSqrtOut"><br>
         </form>
+        <br><br><br>
+        <h3 id="ans">Answer Here</h3>
         <script>
             let sqrtInput = document.getElementById('exactSqrtIn');
-            let sqrtOutput = document.getElementById('exactSqrtOut');
+            let sqrtOutput = document.getElementById('ans');
             sqrtInput.oninput = function(){
-                sqrtOutput.value = Math.sqrt(sqrtInput.value)
+                sqrtOutput.innerHTML = Math.sqrt(sqrtInput.value)
                 if(sqrtInput.value == ""){
                     sqrtOutput.value = "";
                 }

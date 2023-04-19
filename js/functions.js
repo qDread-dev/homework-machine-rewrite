@@ -8,21 +8,21 @@ function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
     }
     if (simpSqrtInput / (k * k) === null)
     {
-        simpSqrtOutput.value = k;
+        simpSqrtOutput.innerHTML = k;
     }
     if (simpSqrtInput.value / (k * k) == 1)
     {
-        simpSqrtOutput.value = k;
+        simpSqrtOutput.innerHTML = k;
     }
     else if (simpSqrtInput.value / (k * k) > 1)
     {
         if (k == "1")
         {
-            simpSqrtOutput.value = "\u{221A}" + (simpSqrtInput.value / (k * k));
+            simpSqrtOutput.innerHTML = "\u{221A}" + (simpSqrtInput.value / (k * k));
         }
         else
         {
-            simpSqrtOutput.value = k + "\u{221A}" + (simpSqrtInput.value / (k * k));
+            simpSqrtOutput.innerHTML = k + "\u{221A}" + (simpSqrtInput.value / (k * k));
         }
     }
 };

@@ -10,8 +10,10 @@ body {
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
     align-items: center;
+    user-select: none;
 }
 input {
+    user-select: all;
     border-radius: 15px;
     border: 2px solid 	#cacde8;
     font-size: 18px;
@@ -23,6 +25,6 @@ input {
     background-color: #303134;
     text-align:center;
 }
-h1, h2, h3{
+h1, h2, h3, h4, h5, h6{
   color: #e4e5f1;
 }
