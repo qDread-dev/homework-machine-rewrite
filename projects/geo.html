@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/calc.css">
+    </head>
+    <body>
+        <form>
+            <h2>Geometric Squence</h2>
+            <label for="nth">What number do you want to find?</label><br>
+            <input type="text" id="nth"><br>
+            <label for="aSubOne">What is a <sub>1</sub></label><br>
+            <input type="text" id="aSubOne"><br>
+            <label for="commonRat">What is the common ratio?</label><br>
+            <input type="text" id="commonRat"><br>
+        </form>
+        <br><br><br>
+        <div>
+            <h3 id="ans">Answer Here</h3>
+        </div>
+        <script>
+            var term = document.getElementById('nth')
+            var aSubOne = document.getElementById('aSubOne')
+            var commonRat = document.getElementById('commonRat')
+            var geoSolution = document.getElementById('ans')
+            var temp;
+            commonRat.oninput = function(){
+                temp = term.value - 1;
+                temp = parseInt(commonRat.value) ** temp;
+                temp = parseInt(aSubOne.value) * parseInt(temp);
+                geoSolution.innerHTML = temp;
+            }
+        </script>
+    </body>
+</html>
