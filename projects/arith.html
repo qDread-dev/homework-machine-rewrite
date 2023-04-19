@@ -6,27 +6,29 @@
     <body>
         <form>
             <!-- not sure what the problem is, javascript is on crack frfr -->
-            <h2>Aritmatic Squence !! CURRENTLY NON FUNCTIONAL !!</h2>
+            <h2>Aritmatic Squence</h2>
             <label for="nth">What number do you want to find?</label><br>
             <input type="text" id="nth"><br>
             <label for="aSubOne">What is a <sub>1</sub></label><br>
             <input type="text" id="aSubOne"><br>
             <label for="commonDif">What is the common difference?</label><br>
             <input type="text" id="commonDif"><br>
-            <label for="arithSolution">Solution</label><br>
-            <input type="text" id="arithSolution"><br>
         </form>
+        <br><br><br>
+        <div>
+            <h3 id="ans">Answer Here</h3>
+        </div>
         <script>
             var term = document.getElementById('nth')
             var aSubOne = document.getElementById('aSubOne')
             var commonDif = document.getElementById('commonDif')
-            var arithSolution = document.getElementById('arithSolution')
+            var arithSolution = document.getElementById('ans')
             var temp;
             commonDif.oninput = function(){
                 temp = term.value - 1;
                 temp = temp * commonDif.value;
-                temp = aSubOne.value + temp;
-                arithSolution.value = temp;
+                temp = parseInt(aSubOne.value) + parseInt(temp);
+                arithSolution.innerHTML = temp;
             }
         </script>
     </body>
