@@ -22,13 +22,13 @@
             var term = document.getElementById('nth')
             var aSubOne = document.getElementById('aSubOne')
             var commonRat = document.getElementById('commonRat')
-            var arithSolution = document.getElementById('ans')
+            var geoSolution = document.getElementById('ans')
             var temp;
             commonRat.oninput = function(){
                 temp = term.value - 1;
-                temp = commonRat.value ** tmp;
+                temp = parseInt(commonRat.value) ** tmp;
                 temp = parseInt(aSubOne.value) * parseInt(temp);
-                arithSolution.innerHTML = temp;
+                geoSolution.innerHTML = temp;
             }
         </script>
     </body>
