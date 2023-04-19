@@ -12,6 +12,7 @@
     font-size: 20px;
     color: #fff;
     text-decoration: none;
+    transition-duration: .5s;
 }
 .tile h4{
     position: absolute;
@@ -45,4 +46,11 @@ input {
 }
 p, h1, h2, h3{
   color: 	#e4e5f1;
+}
+
+.tile:hover{
+    width: 190px;
+    height: 190px;
+    margin: 15px;
+    transition-duration: 1s;
 }
