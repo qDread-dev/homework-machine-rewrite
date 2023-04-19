@@ -13,6 +13,9 @@
     color: #fff;
     text-decoration: none;
     transition-duration: .5s;
+    animation-name: intro;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
 }
 .tile h4{
     position: absolute;
@@ -53,4 +56,28 @@ p, h1, h2, h3{
     height: 190px;
     margin: 15px;
     transition-duration: 1s;
+}
+
+@keyframes intro {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body h1{
+    animation-name: intro;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+
+}
+
+body p{
+    animation-name: intro;
+    animation-duration: .75s;
+    animation-timing-function: ease-in-out;
 }
