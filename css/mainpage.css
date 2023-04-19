@@ -81,3 +81,6 @@ body p{
     animation-duration: .75s;
     animation-timing-function: ease-in-out;
 }
+body {
+    user-select: none;
+}
