@@ -8,14 +8,16 @@
         <form>
             <label for="equationIn">Enter the equation here</label><br>
             <input type="text" id="equationIn"><br>
-            <label for="equationOut">Output</label><br>
-            <input type="text" id="equationOut"><br>
         </form>
+        <br><br><br>
+        <div>
+            <h3 id="ans">Answer Here</h3>
+        </div>
         <script>
             let basicInput = document.getElementById('equationIn');
-            let basicOutput = document.getElementById('equationOut');
+            let basicOutput = document.getElementById('ans');
             basicInput.oninput = function(){
-                basicOutput.value = eval(basicInput.value);
+                basicOutput.innerHTML = eval(basicInput.value);
                 if(basicInput.value == ""){
                     basicOutput.value = "";
                 }

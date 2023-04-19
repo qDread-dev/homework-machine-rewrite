@@ -10,8 +10,10 @@ body {
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
     align-items: center;
+    user-select: none;
 }
 input {
+    user-select: all;
     border-radius: 15px;
     border: 2px solid 	#cacde8;
     font-size: 18px;

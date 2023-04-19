@@ -6,15 +6,19 @@
     </head>
     <body>
         <h2>Simplify Square Roots</h2>
+        <br><br><br>
         <form>
             <label for="simpSqrtIn">Enter the number here</label><br>
             <input type="text" id="simpSqrtIn"><br>
-            <label for="simpSqrtOut">Output:</label><br>
-            <input type="text" id="simpSqrtOut"><br>
         </form>
+        <br><br><br>
+        <div>
+            <h3 id="ans">Answer Here</h3>
+        </div>
+
         <script>
             let simpSqrtInput = document.getElementById('simpSqrtIn');
-            let simpSqrtOutput = document.getElementById('simpSqrtOut');
+            let simpSqrtOutput = document.getElementById('ans');
             let k = 1;
             simpSqrtInput.oninput = function(){
                 simplifySqrt(simpSqrtInput, simpSqrtOutput, k)
