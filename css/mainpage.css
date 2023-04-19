@@ -29,6 +29,7 @@ body {
     background-color: #141414;
     text-align: center;
     align-items: center;
+    font-family: 'Ubuntu', sans-serif;
 }
 input {
     border-radius: 15px;
