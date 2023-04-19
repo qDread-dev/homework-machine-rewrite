@@ -26,3 +26,12 @@ function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
         }
     }
 };
+
+function factorials(factorialInput, factorialOutput){
+    tmp = factorialInput.value;
+    for (let i = parseInt(factorialInput.value); i > 1; i--)
+    {
+        tmp *= i-1;
+    }
+    factorialOutput.innerHTML = tmp;
+};

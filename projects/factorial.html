@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/calc.css">
+        <script src="../js/functions.js"></script>
+    </head>
+    <body>
+        <h2>Factorials</h2>
+        <form>
+            <label for="equationIn">Enter the number here</label><br>
+            <input type="text" id="equationIn"><br>
+        </form>
+        <br><br><br>
+        <div>
+            <h3 id="ans">Answer Here</h3>
+        </div>
+        <script>
+            let factorialInput = document.getElementById('equationIn');
+            let factorialOutput = document.getElementById('ans');
+            factorialInput.oninput = function(){
+                factorials(factorialInput, factorialOutput);
+            }
+        </script>
+    </body>
+</html>
