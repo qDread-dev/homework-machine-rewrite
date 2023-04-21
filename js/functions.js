@@ -29,6 +29,10 @@ function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
 
 function factorials(factorialInput, factorialOutput){
     tmp = factorialInput.value;
+    if (parseInt(factorialInput.value) == 0){
+        factorialOutput.innerHTML = 1;
+        return;
+    }
     for (let i = parseInt(factorialInput.value); i > 1; i--)
     {
         tmp *= i-1;
