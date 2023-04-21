@@ -23,10 +23,15 @@
             var commonRat = document.getElementById('commonRat')
             var geoSolution = document.getElementById('ans')
             var temp;
-            commonRat.oninput = function(){
+
+            term.addEventListener('input', calc());
+            aSubOne.addEventListener('input', calc());
+            commonRat.addEventListener('input', calc());
+
+            function calc() {
                 temp = term.value - 1;
-                temp = parseInt(commonRat.value) ** temp;
-                temp = parseInt(aSubOne.value) * parseInt(temp);
+                temp = temp * commonRat.value;
+                temp = parseInt(aSubOne.value) + parseInt(temp);
                 geoSolution.innerHTML = temp;
             }
         </script>

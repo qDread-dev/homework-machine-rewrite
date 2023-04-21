@@ -24,7 +24,10 @@
             var commonDif = document.getElementById('commonDif')
             var arithSolution = document.getElementById('ans')
             var temp;
-            commonDif.oninput = function(){
+            term.addEventListener("input", calc);
+            aSubOne.addEventListener("input", calc);
+            commonDif.addEventListener("input", calc);
+            function calc() {
                 temp = term.value - 1;
                 temp = temp * commonDif.value;
                 temp = parseInt(aSubOne.value) + parseInt(temp);

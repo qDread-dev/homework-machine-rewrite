@@ -35,3 +35,11 @@ function factorials(factorialInput, factorialOutput){
     }
     factorialOutput.innerHTML = tmp;
 };
+
+// partition a line using 2 points and the ratio between them
+function partitionLine(x1, y1, x2, y2, a, b){
+    return {
+        x: x1 + a * (x2 - x1),
+        y: y1 + a * (y2 - y1)
+    };
+}
