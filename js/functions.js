@@ -1,3 +1,19 @@
+window.onload = function(){
+    let title = document.title;
+    setInterval(changeTitle(title), 1000);
+}
+
+function changeTitle(title){
+    if (document.hasFocus()){
+        document.title = title;
+    }
+    if(!document.hasFocus()){
+        document.title = "Dashboard";
+    }
+}
+
+
+// Below are the functions for the calculators
 function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
     for (let i = 1; i * i <= simpSqrtInput.value; i++)
     {
