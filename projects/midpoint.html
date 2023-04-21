@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/calc.css">
+        <script src="../js/functions.js"></script>
+    </head>
+    <body>
+        <form>
+            <h2>Line Partitioning</h2>
+            <!-- Set up inputs to get midpoint using 2 points -->
+            <label for="x1">X<sub>1</sub></label><br>
+            <input type="text" id="x1"><br>
+            <label for="y1">Y<sub>1</sub></label><br>
+            <input type="text" id="y1"><br>
+            <label for="x2">X<sub>2</sub></label><br>
+            <input type="text" id="x2"><br>
+            <label for="y2">Y<sub>2</sub></label><br>
+            <input type="text" id="y2"><br>
+        </form>
+        <br><br><br>
+        <div>
+            <h3 id="ans">Answer Here</h3>
+        </div>
+        <script>
+            // add variables for the inputs
+            let x1 = document.getElementById('x1');
+            let y1 = document.getElementById('y1');
+            let x2 = document.getElementById('x2');
+            let y2 = document.getElementById('y2');
+            let ans = document.getElementById('ans');
+
+            // add event listeners to the inputs
+            x1.addEventListener('input', calc());
+            y1.addEventListener('input', calc());
+            x2.addEventListener('input', calc());
+            y2.addEventListener('input', calc());
+
+            // calculate the midpoint using inputs
+            function calc() {
+                let x3 = (x1.value + x2.value) / 2;
+                let y3 = (y1.value + y2.value) / 2;
+                ans.innerHTML = "(" + x3 + ", " + y3 + ")";
+            }
+        </script>
+    </body>
+</html>
