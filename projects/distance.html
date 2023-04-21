@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../css/calc.css">
+    </head>
+    <body>
+        <h2>Distance Formula</h2>
+        <form>
+            <label for="xOne">X<sub>1</sub></label><br>
+            <input type="text" id="xOne"><br>
+            <label for="yOne">Y<sub>1</sub></label><br>
+            <input type="text" id="yOne"><br>
+            <label for="xTwo">X<sub>2</sub></label><br>
+            <input type="text" id="xTwo"><br>
+            <label for="yTwo">Y<sub>2</sub></label><br>
+            <input type="text" id="yTwo"><br>
+        </form>
+        <br><br><br>
+        <div>
+            <h3 id="ans">Answer Here</h3>
+        </div>
+        <script>
+            let xOne = document.getElementById("xOne");
+            let yOne = document.getElementById("yOne");
+            let xTwo = document.getElementById("xTwo");
+            let yTwo = document.getElementById("yTwo");
+            let ans = document.getElementById("ans");
+
+            // Wait for input on any of the inputs
+            xOne.addEventListener("input", calc);
+            yOne.addEventListener("input", calc);
+            xTwo.addEventListener("input", calc);
+            yTwo.addEventListener("input", calc);
+            // when input is detected, calculate the distance
+            function calc() {
+                let x1 = parseFloat(xOne.value);
+                let y1 = parseFloat(yOne.value);
+                let x2 = parseFloat(xTwo.value);
+                let y2 = parseFloat(yTwo.value);
+                let distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                distance = Math.round(distance * 1000) / 1000;
+                ans.innerHTML = distance;
+            }
+        </script>
+    </body>
+</html>

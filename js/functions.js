@@ -35,3 +35,4 @@ function factorials(factorialInput, factorialOutput){
     }
     factorialOutput.innerHTML = tmp;
 };
+
