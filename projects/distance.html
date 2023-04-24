@@ -2,9 +2,11 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="../css/calc.css">
+        <script src="../js/functions.js"></script>
     </head>
     <body>
         <h2>Distance Formula</h2>
+        <title>Distance | THM</title>
         <form>
             <label for="xOne">X<sub>1</sub></label><br>
             <input type="text" id="xOne"><br>
@@ -18,6 +20,8 @@
         <br><br><br>
         <div>
             <h3 id="ans">Answer Here</h3>
+            <br><br>
+            <h3 id="ansSimp">Simplified Answer Here</h3>
         </div>
         <script>
             let xOne = document.getElementById("xOne");
@@ -25,6 +29,7 @@
             let xTwo = document.getElementById("xTwo");
             let yTwo = document.getElementById("yTwo");
             let ans = document.getElementById("ans");
+            let ansSimp = document.getElementById("ansSimp");
 
             // Wait for input on any of the inputs
             xOne.addEventListener("input", calc);
@@ -40,6 +45,7 @@
                 let distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
                 distance = Math.round(distance * 1000) / 1000;
                 ans.innerHTML = distance;
+                ansSimp.innerHTML = simplifySqrtRefactor(distance);
             }
         </script>
     </body>

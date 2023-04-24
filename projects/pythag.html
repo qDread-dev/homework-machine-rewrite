@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="../css/calc.css">
         <script src="../js/functions.js"></script>
+        <title>Pythagorean Theorem | THM</title>
     </head>
     <body>
         <h2>Pythagorean Theorem</h2>
@@ -20,17 +21,16 @@
             <script>
                 let pythFcA = document.getElementById('pythFcA');
                 let pythFcB = document.getElementById('pythFcB');
-                let pythFcC = document.getElementById('ansC');
+                let ansC = document.getElementById('ansC');
 
                 pythFcA.oninput = function(){
-                        pythFcC.value = pythFcA.value*pythFcA.value + pythFcB.value*pythFcB.value;
-                        k = 1;
-                        simplifySqrt(pythFcC, pythFcC, k)
+                    tmp = pythFcA.value*pythFcA.value + pythFcB.value*pythFcB.value;
+                    ansC.innerHTML = simplifySqrtRefactor(tmp);
+                        
                 }
                 pythFcB.oninput = function(){
-                    pythFcC.value = pythFcA.value*pythFcA.value + pythFcB.value*pythFcB.value;
-                        k=1;
-                        simplifySqrt(pythFcC, pythFcC, k)
+                    tmp = pythFcA.value*pythFcA.value + pythFcB.value*pythFcB.value;
+                    ansC.innerHTML = simplifySqrtRefactor(tmp);
                 }
             </script>
             <h3>Find A</h3>
@@ -46,19 +46,17 @@
                 <h3 id="ansA">Answer Here</h3>
             </div>
             <script>
-                let pythFaA = document.getElementById('ansA')
+                let ansA = document.getElementById('ansA')
                 let pythFaB = document.getElementById('pythFaB')
                 let pythFaC = document.getElementById('pythFaC')
 
                 pythFaB.oninput = function(){
-                        k = 1;
-                        pythFaA.value = pythFaB.value*pythFaB.value - pythFaC.value*pythFaC.value;
-                        simplifySqrt(pythFaA, pythFaA, k)
+                    tmp = pythFaB.value*pythFaB.value - pythFaC.value*pythFaC.value;
+                    ansA.innerHTML = simplifySqrtRefactor(tmp);
                 }
                 pythFaC.oninput=function(){
-                    k=1;
-                    pythFaA.value = pythFaC.value*pythFaC.value - pythFaB.value*pythFaB.value;
-                    simplifySqrt(pythFaA, pythFaA, k)
+                    tmp = pythFaC.value*pythFaC.value - pythFaB.value*pythFaB.value;
+                    ansA.innerHTML = simplifySqrtRefactor(tmp);
                 }
             </script>
     </body>
