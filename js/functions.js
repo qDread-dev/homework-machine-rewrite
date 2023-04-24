@@ -15,7 +15,7 @@ function changeTitle(title){
 
 // Below are the functions for the calculators
 
-function simplifySqrtRefactor(simpSqrtInput){
+function simplifySqrt(simpSqrtInput){
     k = 1;
     for (let i = 1; i * i <= simpSqrtInput; i++)
     {
