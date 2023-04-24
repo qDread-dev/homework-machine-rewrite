@@ -43,6 +43,36 @@ function simplifySqrt(simpSqrtInput, simpSqrtOutput, k){
     }
 };
 
+function simplifySqrtRefactor(simpSqrtInput){
+    k = 1;
+    for (let i = 1; i * i <= simpSqrtInput; i++)
+    {
+        if (simpSqrtInput % (i * i) == 0)
+        {
+            k = i;
+        }
+    }
+    if (simpSqrtInput / (k * k) === null)
+    {
+        return k;
+    }
+    if (simpSqrtInput / (k * k) == 1)
+    {
+        return k;
+    }
+    else if (simpSqrtInput / (k * k) > 1)
+    {
+        if (k == "1")
+        {
+            return "\u{221A}" + (simpSqrtInput / (k * k));
+        }
+        else
+        {
+            return k + "\u{221A}" + (simpSqrtInput / (k * k));
+        }
+    }
+};
+
 function factorials(factorialInput, factorialOutput){
     tmp = factorialInput.value;
     if (parseInt(factorialInput.value) == 0){

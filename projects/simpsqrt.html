@@ -22,7 +22,7 @@
             let simpSqrtOutput = document.getElementById('ans');
             let k = 1;
             simpSqrtInput.oninput = function(){
-                simplifySqrt(simpSqrtInput, simpSqrtOutput, k)
+                simpSqrtOutput.innerHTML = simplifySqrtRefactor(parseFloat(simpSqrtInput.value));
             }
             </script>
     </body>
